@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reforma Dental brand kit — colors, fonts, layout motifs.
+   Source: RD Branding/ (Manual de identidad, Paleta de color, Tipografias). */
+:root {
+  --rd-green-primary: #aed136; /* logo mark, accents, solid brand backgrounds */
+  --rd-blue-light: #73cfed; /* headlines, badges, CTA highlights */
+  --rd-blue-dark: #4f646f; /* deep contrast accents, dark UI touches */
+  --rd-black-brand: #545758; /* wordmark gray / body text on light backgrounds */
+}
+
+/* Rockwell Nova — headline/title face (Titulos). Self-hosted, not on Google Fonts. */
+@font-face {
+  font-family: "Rockwell Nova";
+  src: url("/fonts/RockwellNova-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rockwell Nova";
+  src: url("/fonts/RockwellNova-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gibson — subhead face (Subtitulos); italic cut for inline emphasis. */
+@font-face {
+  font-family: "Gibson";
+  src: url("/fonts/Gibson-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gibson";
+  src: url("/fonts/Gibson-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
+}
+
+h1 {
+  font-family: "Rockwell Nova", Georgia, serif;
+  font-weight: 800;
+  color: var(--rd-black-brand);
+}
+
+h2 {
+  font-family: "Gibson", "Century Gothic", sans-serif;
+  font-weight: 600;
+}
+
+em.highlight {
+  font-family: "Gibson", "Century Gothic", sans-serif;
+  font-style: italic;
+  color: var(--rd-blue-dark);
+}
+
+.dark h1 {
+  color: var(--rd-blue-light);
+}
