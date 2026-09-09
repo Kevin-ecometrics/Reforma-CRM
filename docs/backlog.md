@@ -59,8 +59,40 @@ to get right. Newest entries at the top of each section.
   breaking anything (Next.js loads `.env` fine), but worth reconciling so a
   fresh clone's setup instructions match what's actually on disk.
 
+## Blocked
+
+- **Outbound WhatsApp (Meta Cloud API)** — waiting on the business owner.
+  Entry point: [developers.facebook.com/apps/1567984181462924](https://developers.facebook.com/apps/1567984181462924)
+  (the same Meta App used for Lead Ads/CAPI) → the "Requisitos y
+  personalización de la aplicación" checklist → **"Personaliza el caso de uso
+  Conectar con los clientes a través de WhatsApp"** (don't touch the other
+  use cases listed there — Marketing API, Catalog, Instagram, etc. are
+  unrelated). That flow leads to "Aceptar las Condiciones del servicio de la
+  plataforma de WhatsApp Business" — a real ToS acceptance on behalf of the
+  business, then on to **API Setup** for the Phone Number ID + temporary
+  access token + adding a verified test recipient number.
+
+  **Caveat found while checking this**: the checklist item for the WhatsApp
+  use case showed as green/checked in the App Dashboard panel *before* the
+  setup was actually completed — don't trust the green checkmark alone as
+  proof it's done. Verify by actually reaching API Setup and getting real
+  values for `WHATSAPP_PHONE_NUMBER_ID` / the access token, not just by the
+  checklist turning green.
+
+  Once the owner hands over `WHATSAPP_PHONE_NUMBER_ID` and
+  `WHATSAPP_ACCESS_TOKEN`, drop them in `.env` and send a real test message
+  via `/api/messaging-test` to confirm before enabling any WhatsApp
+  automation rules. Steps: [facebook-setup.md §6](./facebook-setup.md#6-set-up-whatsapp-cloud-api-for-outbound-whatsapp).
+- **Outbound SMS (Twilio)** — waiting on the business owner. Separate
+  platform from Meta, needs a brand-new Twilio account (billing/business
+  info) created and owned by the business, not something to set up on their
+  behalf. In the US, SMS may also require A2P 10DLC carrier registration
+  before production sending works (can take days to approve). Once the owner
+  hands over `TWILIO_ACCOUNT_SID`/`TWILIO_AUTH_TOKEN`/`TWILIO_FROM_SMS_NUMBER`,
+  drop them in `.env` and send a real test message via `/api/messaging-test`
+  to confirm before enabling any SMS automation rules.
+
 ## Not started
 
-- **Outbound SMS (Twilio)** — `TWILIO_ACCOUNT_SID`/`TWILIO_AUTH_TOKEN`/`TWILIO_FROM_SMS_NUMBER` unset.
-- **Outbound WhatsApp (Meta Cloud API)** — `WHATSAPP_ACCESS_TOKEN`/`WHATSAPP_PHONE_NUMBER_ID` unset.
-  Setup steps already documented in [facebook-setup.md §6](./facebook-setup.md#6-set-up-whatsapp-cloud-api-for-outbound-whatsapp).
+(nothing currently — SMTP, Facebook Lead Ads/CAPI are done; WhatsApp and
+Twilio are blocked on the owner above.)
