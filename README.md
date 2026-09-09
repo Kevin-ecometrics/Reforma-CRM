@@ -37,6 +37,11 @@ Message-sending automation rules ship **disabled** even once credentials are set
 - `src/lib/automation.ts` + `src/lib/scheduler.ts` — rule engine, driven by a `node-cron` job started once via `src/instrumentation.ts`
 - `src/app/` — pages (`/` pipeline board, `/leads/[id]` detail, `/settings`) and `api/*` route handlers
 
+## Progress log
+
+See [docs/backlog.md](docs/backlog.md) for what's confirmed working, what's
+open, and what hasn't been started yet — mainly the Facebook integrations.
+
 ## Known gaps (intentional for this stage)
 
 - No login/auth — single local user, meant to run on localhost only.
