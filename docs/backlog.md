@@ -6,6 +6,14 @@ to get right. Newest entries at the top of each section.
 
 ## Done
 
+- **Outbound email (SMTP)** — wired to the clinic's own domain mailbox
+  (`mydentist@reformadental.com`) via cPanel/Namecheap-style hosting
+  (`host11.registrar-servers.com:465`). `SMTP_FROM` had to be corrected to
+  match the authenticated `SMTP_USER` domain — a mismatched From address gets
+  rejected/flagged by most SMTP relays. Confirmed working with a real
+  self-test send (`ok: true` from `/api/messaging-test`). Email automation
+  rules are still off by default (per `README.md`) — turn them on in
+  Settings → Automation rules once the message copy is reviewed.
 - **Facebook Lead Ads sync** — polling every 5 min via `syncFacebookLeads()`.
   Confirmed pulling real leads end to end. Required Page Access Token permissions:
   `pages_show_list`, `pages_read_engagement`, `pages_manage_ads`, `leads_retrieval`
@@ -53,7 +61,6 @@ to get right. Newest entries at the top of each section.
 
 ## Not started
 
-- **Outbound email (SMTP)** — `SMTP_HOST`/`SMTP_USER`/`SMTP_PASS`/`SMTP_FROM` unset.
 - **Outbound SMS (Twilio)** — `TWILIO_ACCOUNT_SID`/`TWILIO_AUTH_TOKEN`/`TWILIO_FROM_SMS_NUMBER` unset.
 - **Outbound WhatsApp (Meta Cloud API)** — `WHATSAPP_ACCESS_TOKEN`/`WHATSAPP_PHONE_NUMBER_ID` unset.
   Setup steps already documented in [facebook-setup.md §6](./facebook-setup.md#6-set-up-whatsapp-cloud-api-for-outbound-whatsapp).
