@@ -3,7 +3,7 @@ import { addActivity } from "../leads";
 import type { Lead, MessageChannel } from "../types";
 import { sendEmail } from "./email";
 import { sendSms } from "./sms";
-import { sendWhatsapp } from "./whatsapp";
+import { sendWhatsapp, sendWhatsappTemplate } from "./whatsapp";
 
 function renderTemplate(body: string, lead: Lead): string {
   return body.replace(/{{\s*name\s*}}/gi, lead.name || "there");
@@ -44,9 +44,18 @@ export async function sendMessageToLead(
   } else if (channel === "sms") {
     result = lead.phone ? await sendSms(lead.phone, body) : { ok: false, error: "Lead has no phone number" };
   } else {
-    result = lead.phone
-      ? await sendWhatsapp(lead.phone, body)
-      : { ok: false, error: "Lead has no phone number" };
+    if (!lead.phone) {
+      result = { ok: false, error: "Lead has no phone number" };
+    } else if (template.whatsappTemplateName) {
+      result = await sendWhatsappTemplate(
+        lead.phone,
+        template.whatsappTemplateName,
+        template.whatsappTemplateLanguage ?? "en_US",
+        [lead.name || "there"]
+      );
+    } else {
+      result = await sendWhatsapp(lead.phone, body);
+    }
   }
 
   await addActivity(

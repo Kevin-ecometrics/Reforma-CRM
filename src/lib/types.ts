@@ -87,6 +87,13 @@ export interface MessageTemplate {
   label: string;
   subject?: string;
   body: string;
+  // WhatsApp only: when set, sendMessageToLead() sends this via Meta's
+  // Message Templates API (works outside the 24h window) instead of as
+  // free-form text. Must match a template that's Approved in WhatsApp ->
+  // Message Templates in Meta Business Manager — sending an unapproved or
+  // misspelled name fails outright rather than falling back to free text.
+  whatsappTemplateName?: string;
+  whatsappTemplateLanguage?: string;
 }
 
 export interface DbSchema {

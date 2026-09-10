@@ -45,8 +45,82 @@ to get right. Newest entries at the top of each section.
     check for this token type; the real test is sending an event and checking
     `events_received` / `messages` in the response.
 
+## Done
+
+- **Outbound WhatsApp (Meta Cloud API)** — owner accepted the WhatsApp
+  Business Platform ToS (under the "Ecommetrica Studio" business portfolio —
+  the app's owning business, not the Page's; expected for an agency-managed
+  setup, confirmed intentional). Got the test number's Phone Number ID
+  (`1332188503303466`, test number +1 555 204 4430) and a temporary (24h)
+  access token, both saved in `.env`. Verified with `debug_token`:
+  `whatsapp_business_messaging` scope present, `is_valid: true`.
+  - **Confirmed free-form text messages fail silently outside the 24h
+    session window** — sent a plain `type: "text"` test message via the
+    CRM's own `/api/messaging-test`; the Graph API accepted it (200, with a
+    `message id`) but it never arrived, because the test recipient had never
+    messaged the test number first. Sending the same recipient a
+    `type: "template"` message (`hello_world`, Meta's default pre-approved
+    template) delivered successfully. This confirms the caveat already
+    called out in `src/lib/messaging/whatsapp.ts` and
+    `facebook-setup.md` — it just wasn't verified live before now.
+  - **Real gap found**: `sendWhatsapp()` only ever sent `type: "text"` — the
+    "New lead arrives → send confirmation message" automation rule (WhatsApp
+    channel) would have looked successful (message id returned) while
+    silently never reaching a brand-new lead, since first contact is always
+    outside the 24h window.
+  - **Fixed**: added `sendWhatsappTemplate()` to
+    `src/lib/messaging/whatsapp.ts` (sends `type: "template"` with a
+    `name`/`language`/optional `components` body-parameter list) and a
+    `MessageTemplate.whatsappTemplateName` /`.whatsappTemplateLanguage`
+    field (`src/lib/types.ts`) so a CRM template can opt into sending via an
+    approved Meta template instead of free text.
+    `sendMessageToLead()` (`src/lib/messaging/index.ts`) now branches on
+    that field automatically, and `PATCH /api/settings/templates` accepts
+    both new fields. Verified the exact request shape against the live API
+    (both with and without `components` — the zero-params case returned
+    `message_status: "accepted"`; the with-params case against `hello_world`
+    correctly errored on param-count mismatch, confirming the payload itself
+    is well-formed).
+  - **Still open**: no real approved business template exists yet — only
+    Meta's demo `hello_world`. The "new-lead-confirmation" WhatsApp CRM
+    template has *not* been pointed at it (would send meaningless "Hello
+    World" content to real leads). Creating and getting Meta's approval for
+    an actual template (e.g. "thanks for reaching out, we'll call you
+    shortly") is a manual step under WhatsApp → Message Templates — do that,
+    then set `whatsappTemplateName`/`whatsappTemplateLanguage` on that CRM
+    template via Settings before enabling the automation rule.
+
+  Confirmed-working template send (PowerShell), for reference:
+  ```powershell
+  curl -i -X POST `
+    https://graph.facebook.com/v25.0/1332188503303466/messages `
+    -H 'Authorization: Bearer {WHATSAPP_ACCESS_TOKEN from .env}' `
+    -H 'Content-Type: application/json' `
+    -d '{ \"messaging_product\": \"whatsapp\", \"to\": \"{recipient in E.164, no +}\", \"type\": \"template\", \"template\": { \"name\": \"hello_world\", \"language\": { \"code\": \"en_US\" } } }'
+  ```
+
 ## Open
 
+- **WhatsApp: no real approved business template yet** — code support is
+  done (see above); don't enable the WhatsApp "new lead confirmation"
+  automation rule until an actual template is created and Approved in Meta,
+  and assigned to that CRM template via Settings.
+- **WhatsApp permanent token: pending second-admin approval.** In progress —
+  found the existing System User ("Claude-agent", confirmed intentional,
+  has Admin access + assigned to the Page, the "E-commetrics - RD Leads"
+  app, and all 3 WhatsApp Business Accounts), requested a never-expiring
+  token scoped to `whatsapp_business_messaging`,
+  `whatsapp_business_management`, `whatsapp_business_manage_events` (Meta
+  wouldn't allow narrowing below these 3 — the app had already accumulated
+  more permissions across Lead Ads/CAPI/WhatsApp, and Meta bundles a token
+  with everything the app has, not per-request). Meta requires a *second*
+  Business Manager admin (not the requester) to approve generating a
+  never-expiring token — request submitted, waiting on that approval before
+  the token is issued. Currently still running on the temporary 24h token
+  from API Setup, which expires same-day — this will need re-requesting if
+  the approval doesn't land before then. Once approved and generated, drop
+  it in `.env` as `WHATSAPP_ACCESS_TOKEN`, verify with `debug_token`
+  (`expires_at: 0`), and update this entry.
 - **Meta's Lead Ads → CRM verification widget** in Events Manager ("Recibiendo
   actividad") still shows "Esperando un evento" even after a real CAPI event
   was sent and accepted (`events_received: 1`). The integration itself is
@@ -61,28 +135,6 @@ to get right. Newest entries at the top of each section.
 
 ## Blocked
 
-- **Outbound WhatsApp (Meta Cloud API)** — waiting on the business owner.
-  Entry point: [developers.facebook.com/apps/1567984181462924](https://developers.facebook.com/apps/1567984181462924)
-  (the same Meta App used for Lead Ads/CAPI) → the "Requisitos y
-  personalización de la aplicación" checklist → **"Personaliza el caso de uso
-  Conectar con los clientes a través de WhatsApp"** (don't touch the other
-  use cases listed there — Marketing API, Catalog, Instagram, etc. are
-  unrelated). That flow leads to "Aceptar las Condiciones del servicio de la
-  plataforma de WhatsApp Business" — a real ToS acceptance on behalf of the
-  business, then on to **API Setup** for the Phone Number ID + temporary
-  access token + adding a verified test recipient number.
-
-  **Caveat found while checking this**: the checklist item for the WhatsApp
-  use case showed as green/checked in the App Dashboard panel *before* the
-  setup was actually completed — don't trust the green checkmark alone as
-  proof it's done. Verify by actually reaching API Setup and getting real
-  values for `WHATSAPP_PHONE_NUMBER_ID` / the access token, not just by the
-  checklist turning green.
-
-  Once the owner hands over `WHATSAPP_PHONE_NUMBER_ID` and
-  `WHATSAPP_ACCESS_TOKEN`, drop them in `.env` and send a real test message
-  via `/api/messaging-test` to confirm before enabling any WhatsApp
-  automation rules. Steps: [facebook-setup.md §6](./facebook-setup.md#6-set-up-whatsapp-cloud-api-for-outbound-whatsapp).
 - **Outbound SMS (Twilio)** — waiting on the business owner. Separate
   platform from Meta, needs a brand-new Twilio account (billing/business
   info) created and owned by the business, not something to set up on their
@@ -94,5 +146,6 @@ to get right. Newest entries at the top of each section.
 
 ## Not started
 
-(nothing currently — SMTP, Facebook Lead Ads/CAPI are done; WhatsApp and
-Twilio are blocked on the owner above.)
+(nothing currently — SMTP, Facebook Lead Ads/CAPI, and WhatsApp connectivity
+are done; Twilio is blocked on the owner above; WhatsApp's remaining gaps are
+tracked under Open.)
