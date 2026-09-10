@@ -35,12 +35,16 @@ interface CapiUserData {
   country?: string[];
 }
 
+interface CapiCustomData {
+  event_source: "crm";
+  lead_event_source: string;
+}
+
 interface CapiEventPayload {
   event_name: string;
   event_time: number;
   action_source: "system_generated";
-  event_source: "crm";
-  lead_event_source: string;
+  custom_data: CapiCustomData;
   user_data: CapiUserData;
 }
 
@@ -95,8 +99,10 @@ export async function sendCapiEvent(lead: Lead, stageName: string): Promise<Capi
     event_name: stageName,
     event_time: Math.floor(Date.now() / 1000),
     action_source: "system_generated",
-    event_source: "crm",
-    lead_event_source: "Reforma Dental CRM",
+    custom_data: {
+      event_source: "crm",
+      lead_event_source: "Reforma Dental CRM",
+    },
     user_data: buildUserData(lead),
   };
 

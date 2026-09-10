@@ -99,34 +99,53 @@ to get right. Newest entries at the top of each section.
     -d '{ \"messaging_product\": \"whatsapp\", \"to\": \"{recipient in E.164, no +}\", \"type\": \"template\", \"template\": { \"name\": \"hello_world\", \"language\": { \"code\": \"en_US\" } } }'
   ```
 
+- **WhatsApp permanent access token** — second-admin approval came through;
+  never-expiring token from the "Claude-agent" System User generated and
+  dropped in `.env` as `WHATSAPP_ACCESS_TOKEN`, replacing the temporary 24h
+  token. Verified with `debug_token`: `expires_at: 0`, `is_valid: true`,
+  all 3 required scopes present (`whatsapp_business_messaging`,
+  `whatsapp_business_management`, `whatsapp_business_manage_events`).
+
 ## Open
 
 - **WhatsApp: no real approved business template yet** — code support is
   done (see above); don't enable the WhatsApp "new lead confirmation"
   automation rule until an actual template is created and Approved in Meta,
   and assigned to that CRM template via Settings.
-- **WhatsApp permanent token: pending second-admin approval.** In progress —
-  found the existing System User ("Claude-agent", confirmed intentional,
-  has Admin access + assigned to the Page, the "E-commetrics - RD Leads"
-  app, and all 3 WhatsApp Business Accounts), requested a never-expiring
-  token scoped to `whatsapp_business_messaging`,
-  `whatsapp_business_management`, `whatsapp_business_manage_events` (Meta
-  wouldn't allow narrowing below these 3 — the app had already accumulated
-  more permissions across Lead Ads/CAPI/WhatsApp, and Meta bundles a token
-  with everything the app has, not per-request). Meta requires a *second*
-  Business Manager admin (not the requester) to approve generating a
-  never-expiring token — request submitted, waiting on that approval before
-  the token is issued. Currently still running on the temporary 24h token
-  from API Setup, which expires same-day — this will need re-requesting if
-  the approval doesn't land before then. Once approved and generated, drop
-  it in `.env` as `WHATSAPP_ACCESS_TOKEN`, verify with `debug_token`
-  (`expires_at: 0`), and update this entry.
-- **Meta's Lead Ads → CRM verification widget** in Events Manager ("Recibiendo
-  actividad") still shows "Esperando un evento" even after a real CAPI event
-  was sent and accepted (`events_received: 1`). The integration itself is
-  confirmed working via direct API test; this is Meta's own UI checklist, not
-  a functional blocker. Follow up via "administra conexión" to see if it
-  reports connected there instead — cosmetic/status-only, not urgent.
+- **Meta's "Conecta tu CRM" (Qualified Leads) checklist** in Events Manager
+  is stuck at "Configuración completada al 20%" — "Enviar un evento de CRM"
+  step not yet marked done, even after real CAPI events were sent and
+  accepted (`events_received: 1`). Two things done to close this out:
+  - **Payload structure fix**: the CRM integration guide's sample payload
+    nests `event_source`/`lead_event_source` inside `custom_data`, but
+    `sendCapiEvent()` (`src/lib/facebookCapi.ts`) was sending them as
+    top-level fields instead — silently accepted by the API (no error) but
+    likely why Meta's checklist wasn't recognizing the events as CRM lead
+    events. Fixed: both fields now nest under `custom_data`, matching the
+    guide exactly. Verified the new shape directly against the live
+    endpoint (`events_received: 1`, no `messages`) before rolling it into
+    the app code.
+  - **New CAPI access token**: generated a fresh one from the "Conecta tu
+    CRM" guide page itself (its own "Generar identificador de acceso"
+    button, separate from the general Events Manager Settings flow).
+    `debug_token` still only shows `read_ads_dataset_quality` in `scopes`
+    (same known-unreliable field, see gotcha above) but a direct test send
+    confirmed it works (`events_received: 1`). Saved to `.env` as
+    `FB_CAPI_ACCESS_TOKEN`, replacing the previous one. Confirmed this is a
+    completely separate app/System User from the WhatsApp and Page Access
+    tokens (`888511418541765` "Conversions API Application" vs `1567984181462924`
+    "E-commetrics - RD Leads") — regenerating it has no effect on those.
+  - Meta's own guide notes correct events "normalmente aparecen en un día de
+    plazo" — checklist was checked same-day as the fix/token swap, so it may
+    just need another day to reflect. **Next step**: re-check the "Conecta tu
+    CRM" checklist tomorrow; if still stuck at 20% with real events flowing
+    in the corrected format, escalate via Meta support instead of assuming
+    another payload issue.
+  - Separately, clicking "Probar eventos" in that same guide page threw a
+    generic "Se ha producido un error..." in the Events Manager UI — not
+    reproduced via direct API calls, so likely a UI-side permissions/session
+    issue on that account rather than an integration problem. Not chased
+    further since the direct API test already confirmed delivery.
 - **`.env` vs `.env.local` naming** — the working env file is currently named
   `.env` (both are gitignored, so no leak risk), but `README.md`'s setup
   instructions and `.env.local.example` still reference `.env.local`. Not
