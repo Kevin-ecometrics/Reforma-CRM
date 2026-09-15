@@ -1,0 +1,1056 @@
+{
+  "leads": [
+    {
+      "id": "ylKx4ml1s2qVSKh5ReSA2",
+      "fbLeadgenId": "27291609100514236",
+      "name": "Narda Newkirk",
+      "email": "Narda.newkirk@icloud.com",
+      "phone": "+18587050241",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "our_$119_clean_&_whitening_promo?",
+        "is_it_urgent?": "",
+        "when_would_you_like_to_book_your_appointment": "2026-08-20T18:00:00.000Z",
+        "can_you_tell_us_more_about_your_oral_health_and_needs": "",
+        "platform": "fb",
+        "is_organic": "false"
+      },
+      "stage": "scheduled",
+      "notes": "",
+      "createdAt": "2026-08-19T05:37:26.000Z",
+      "updatedAt": "2026-09-09T19:29:23.299Z"
+    },
+    {
+      "id": "CPj5xg9JntyfL0OCuTGr3",
+      "fbLeadgenId": "1034926822639344",
+      "name": "Micheal Hagstrom",
+      "email": "Faux13@msn.com",
+      "phone": "+16198655904",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "our_$60_deep_cleaning_promo",
+        "is_it_urgent?": "",
+        "when_would_you_like_to_book_your_appointment": "2026-08-18T14:00:00.000Z",
+        "can_you_tell_us_more_about_your_oral_health_and_needs": "",
+        "platform": "fb",
+        "is_organic": "false"
+      },
+      "stage": "scheduled",
+      "notes": "Confirmed he wants the $60 deep cleaning promo. Prefers afternoon appointments.",
+      "createdAt": "2026-08-18T09:28:13.000Z",
+      "updatedAt": "2026-09-09T19:29:23.299Z"
+    },
+    {
+      "id": "1JDK7F2TiweycrcopcG4c",
+      "fbLeadgenId": "27911502438521975",
+      "name": "Bella OG",
+      "email": "busiest_coop.0t@icloud.com",
+      "phone": "+17606236011",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "email": "busiest_coop.0t@icloud.com",
+        "full_name": "Bella OG",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "Brken bridge ,front tooth starting to feel sensitive",
+        "are_you_looking_for": "dental_replacements?",
+        "phone_number": "+17606236011",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.681Z",
+      "updatedAt": "2026-09-09T18:54:26.681Z"
+    },
+    {
+      "id": "Ikldr8j8q4dfEl4f_QJQ5",
+      "fbLeadgenId": "1370854028448237",
+      "name": "Tanya",
+      "email": "Tzepeda31@gmail.com",
+      "phone": "+16197355544",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "full_name": "Tanya",
+        "email": "Tzepeda31@gmail.com",
+        "phone_number": "+16197355544",
+        "are_you_looking_for": "pain_relief?",
+        "is_it_urgent?": "yes,_need_help",
+        "when_would_you_like_to_book_your_appointment?": "Sep 3, 2026 at 10:00 AM PDT",
+        "phone_number_verified": "false"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.709Z",
+      "updatedAt": "2026-09-09T18:54:26.709Z"
+    },
+    {
+      "id": "KJXPkYDtvwIoV5BQ10TtL",
+      "fbLeadgenId": "2010662012913176",
+      "name": "Javier F Cortes",
+      "email": "xcortezquintero@gmail.com",
+      "phone": "+16196368181",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "dental_replacements?",
+        "full_name": "Javier F Cortes",
+        "phone_number": "+16196368181",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "root canal",
+        "email": "xcortezquintero@gmail.com",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.729Z",
+      "updatedAt": "2026-09-09T18:54:26.729Z"
+    },
+    {
+      "id": "8--vZEo2pg0Uc4cHDVqDR",
+      "fbLeadgenId": "1011027675246650",
+      "name": "Jojo Kimpo text me first",
+      "email": "kympstrans@yahoo.com",
+      "phone": "+16196395495",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "dental_replacements?",
+        "full_name": "Jojo Kimpo text me first",
+        "phone_number": "+16196395495",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "I lost one of my front tooth and need to be replaced with dental implant as my dentist advised.",
+        "email": "kympstrans@yahoo.com",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.746Z",
+      "updatedAt": "2026-09-09T18:54:26.746Z"
+    },
+    {
+      "id": "LU36RTxMUQrnyF2M8JK9i",
+      "fbLeadgenId": "1064252822673885",
+      "name": "Vijayalaxmi Shadagopanb",
+      "email": "Vijayslaxmi7j@gmail.com",
+      "phone": "+13103390080",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "email": "Vijayslaxmi7j@gmail.com",
+        "full_name": "Vijayalaxmi Shadagopanb",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "Need fillings",
+        "are_you_looking_for": "dental_replacements?",
+        "phone_number": "+13103390080",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.770Z",
+      "updatedAt": "2026-09-09T18:54:26.770Z"
+    },
+    {
+      "id": "WcsOd5E5zrAMw2YfSYJQx",
+      "fbLeadgenId": "1623041042553737",
+      "name": "Heather Marie",
+      "email": "lvn072007@gmail.com",
+      "phone": "+17606058280",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "our_$119_clean_&_whitening_promo?",
+        "full_name": "Heather Marie",
+        "phone_number": "+17606058280",
+        "email": "lvn072007@gmail.com",
+        "when_would_you_like_to_book_your_appointment?": "2026-08-30T09:00:00-0700",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.789Z",
+      "updatedAt": "2026-09-09T18:54:26.789Z"
+    },
+    {
+      "id": "LzjYv_OT5vluwiQKSkLL6",
+      "fbLeadgenId": "4590617737833365",
+      "name": "Sara J Fraser Cazares",
+      "email": "sarajfraser@gmail.com",
+      "phone": "+16193816277",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "dental_replacements?",
+        "full_name": "Sara J Fraser Cazares",
+        "phone_number": "+16193816277",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "just shopping around now at the moment don't have the $ now but will later couple of months 3-4 mos",
+        "email": "sarajfraser@gmail.com",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.837Z",
+      "updatedAt": "2026-09-09T18:54:26.837Z"
+    },
+    {
+      "id": "jo8BRWluA2AIDxJRWEGgY",
+      "fbLeadgenId": "1738149250631876",
+      "name": "Jovita Fejeran Marrero",
+      "email": "marrerojovitaf@gmail.com",
+      "phone": "+16198745418",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "email": "marrerojovitaf@gmail.com",
+        "full_name": "Jovita Fejeran Marrero",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "I need teeth very badly!",
+        "are_you_looking_for": "dental_replacements?",
+        "phone_number": "+16198745418",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.852Z",
+      "updatedAt": "2026-09-09T18:54:26.852Z"
+    },
+    {
+      "id": "nNKFNoEHEyEI3qNYJ3YgQ",
+      "fbLeadgenId": "1965092484311161",
+      "name": "Marilyn Cropper",
+      "email": "croppermarilyn40@icloud.com",
+      "phone": "+14432353870",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "email": "croppermarilyn40@icloud.com",
+        "full_name": "Marilyn Cropper",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "Need an extraction and need implants",
+        "are_you_looking_for": "dental_replacements?",
+        "phone_number": "+14432353870",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:26.868Z",
+      "updatedAt": "2026-09-09T18:54:26.868Z"
+    },
+    {
+      "id": "-6F73V0beKpqx18SjrZZA",
+      "fbLeadgenId": "1565768038471995",
+      "name": "<test lead: dummy data for full_name>",
+      "email": "test@meta.com",
+      "phone": "<test lead: dummy data for phone_number>",
+      "source": "facebook",
+      "campaignName": null,
+      "adName": null,
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "<test lead: dummy data for are_you_looking_for>",
+        "is_it_urgent?": "<test lead: dummy data for is_it_urgent?>",
+        "when_would_you_like_to_book_your_appointment?": "<test lead: dummy data for when_would_you_like_to_book_your_appointment?>",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "<test lead: dummy data for can_you_tell_us_more_about_your_oral_health_and_needs?>",
+        "full_name": "<test lead: dummy data for full_name>",
+        "email": "test@meta.com",
+        "phone_number": "<test lead: dummy data for phone_number>"
+      },
+      "stage": "contacted",
+      "notes": "",
+      "createdAt": "2026-09-09T18:54:27.189Z",
+      "updatedAt": "2026-09-11T18:58:13.709Z"
+    },
+    {
+      "id": "J7Md7Z_8bvfFkfhYOyyq9",
+      "fbLeadgenId": "28383575641310682",
+      "name": "Kevin Okhuysen",
+      "email": "ortega1gv@gmail.com",
+      "phone": "6632153454",
+      "source": "facebook",
+      "campaignName": null,
+      "adName": null,
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "<test lead: dummy data for are_you_looking_for>",
+        "is_it_urgent?": "<test lead: dummy data for is_it_urgent?>",
+        "when_would_you_like_to_book_your_appointment?": "<test lead: dummy data for when_would_you_like_to_book_your_appointment?>",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "<test lead: dummy data for can_you_tell_us_more_about_your_oral_health_and_needs?>",
+        "full_name": "Kevin Okhuysen",
+        "email": "ortega1gv@gmail.com",
+        "phone_number": "6632153454",
+        "phone_number_verified": "false"
+      },
+      "stage": "scheduled",
+      "notes": "",
+      "createdAt": "2026-09-09T20:30:01.354Z",
+      "updatedAt": "2026-09-10T23:18:28.824Z"
+    },
+    {
+      "id": "Ir-4w9e-DHYqv3EjBgdHo",
+      "fbLeadgenId": "1609732670809992",
+      "name": "Kevin Okhuysen",
+      "email": "ortega1gv@gmail.com",
+      "phone": "6632153454",
+      "source": "facebook",
+      "campaignName": null,
+      "adName": null,
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "<test lead: dummy data for are_you_looking_for>",
+        "is_it_urgent?": "<test lead: dummy data for is_it_urgent?>",
+        "when_would_you_like_to_book_your_appointment?": "<test lead: dummy data for when_would_you_like_to_book_your_appointment?>",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "<test lead: dummy data for can_you_tell_us_more_about_your_oral_health_and_needs?>",
+        "full_name": "Kevin Okhuysen",
+        "email": "ortega1gv@gmail.com",
+        "phone_number": "6632153454",
+        "phone_number_verified": "false"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-11T19:00:01.213Z",
+      "updatedAt": "2026-09-11T19:00:01.213Z"
+    },
+    {
+      "id": "ScYMigEy1ub06MR_SThop",
+      "fbLeadgenId": "1085178090867722",
+      "name": "Eloisa Reynolds",
+      "email": "ereynolds41359@gmail.com",
+      "phone": "+14086036615",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "are_you_looking_for": "dental_replacements?",
+        "full_name": "Eloisa Reynolds",
+        "phone_number": "+14086036615",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "most recently most of my teeth have minimal to extreme pain. last week had two teeth pulled. teeth are in consistent pain. from 1-10 a 2-3 pain level",
+        "email": "ereynolds41359@gmail.com",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-11T19:00:01.346Z",
+      "updatedAt": "2026-09-11T19:00:01.346Z"
+    },
+    {
+      "id": "Q1l_OvpF0YzVwgiHE-Efk",
+      "fbLeadgenId": "1600971838392516",
+      "name": "Patricia",
+      "email": "PAltamirano1999@yahoo.com",
+      "phone": "+17605803641",
+      "source": "facebook",
+      "campaignName": "Endodontics NOW 02- Instant form",
+      "adName": "Endo now",
+      "formName": "Qualifying form-copy",
+      "fieldDataRaw": {
+        "full_name": "Patricia",
+        "email": "PAltamirano1999@yahoo.com",
+        "phone_number": "+17605803641",
+        "are_you_looking_for": "dental_replacements?",
+        "can_you_tell_us_more_about_your_oral_health_and_needs?": "Cracked bottom tooth and a top open extraction removed wound. Client raised to the idea of having early signs of sepsis infection",
+        "phone_number_verified": "true"
+      },
+      "stage": "new",
+      "notes": "",
+      "createdAt": "2026-09-11T19:00:01.502Z",
+      "updatedAt": "2026-09-11T19:00:01.502Z"
+    }
+  ],
+  "stages": [
+    {
+      "id": "new",
+      "name": "New",
+      "order": 0,
+      "color": "#545758"
+    },
+    {
+      "id": "contacted",
+      "name": "Contacted",
+      "order": 1,
+      "color": "#73CFED"
+    },
+    {
+      "id": "scheduled",
+      "name": "Scheduled",
+      "order": 2,
+      "color": "#4F646F"
+    },
+    {
+      "id": "consultation",
+      "name": "Consultation",
+      "order": 3,
+      "color": "#8AA6AE"
+    },
+    {
+      "id": "won",
+      "name": "Won",
+      "order": 4,
+      "color": "#AED136"
+    },
+    {
+      "id": "lost",
+      "name": "Lost",
+      "order": 5,
+      "color": "#ef4444"
+    }
+  ],
+  "activities": [
+    {
+      "id": "Wapjsa7psHTlUsEw1aHw6",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-08-19T05:37:26.000Z"
+    },
+    {
+      "id": "DobxEpIuVglKVHONGjrqj",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-08-19T05:37:26.500Z"
+    },
+    {
+      "id": "tzR-UTMrv0UoAzyZMxWQ8",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-08-18T09:28:13.000Z"
+    },
+    {
+      "id": "t8s-OOF-IYa52qd-dvtZp",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-08-18T09:28:13.500Z"
+    },
+    {
+      "id": "zEQxFzt6hPCISbYI8fHDT",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "stage_change",
+      "content": "Stage changed: new → contacted",
+      "createdAt": "2026-08-18T10:15:00.000Z"
+    },
+    {
+      "id": "XEKSZHG3nRrwV0c1gcQzI",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "capi_failed",
+      "content": "CAPI event \"Contacted\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-08-18T10:15:00.500Z"
+    },
+    {
+      "id": "_C97gHbM7Ro7FXIp59uX1",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "note",
+      "content": "Called and left voicemail explaining the $60 deep cleaning promo.",
+      "createdAt": "2026-08-18T10:20:00.000Z"
+    },
+    {
+      "id": "8XSR30iMmFMg99sswhVKj",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "note",
+      "content": "He called back, interested. Wants to book for tomorrow afternoon.",
+      "createdAt": "2026-08-18T16:45:00.000Z"
+    },
+    {
+      "id": "u2mD_s8seOtdS5VzUZwXG",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "stage_change",
+      "content": "Stage changed: contacted → scheduled",
+      "createdAt": "2026-08-19T15:10:00.000Z"
+    },
+    {
+      "id": "xP2suuO5FLfhK5v_nRrvp",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "capi_failed",
+      "content": "CAPI event \"Scheduled\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-08-19T15:10:00.500Z"
+    },
+    {
+      "id": "9CnuaUqxcumFMXurwjyPE",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "note",
+      "content": "Confirmed he wants the $60 deep cleaning promo. Prefers afternoon appointments.",
+      "createdAt": "2026-08-19T15:10:30.000Z"
+    },
+    {
+      "id": "-Rt5gyWNMBZqD-tlSNxhU",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "type": "stage_change",
+      "content": "Stage changed: new → contacted",
+      "createdAt": "2026-08-25T23:44:34.621Z"
+    },
+    {
+      "id": "csXYsSHyYqcNknsF-0goi",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "type": "capi_failed",
+      "content": "CAPI event \"Contacted\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-08-25T23:44:34.632Z"
+    },
+    {
+      "id": "OtGwcJQPJXjKwZk_X32XM",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "type": "stage_change",
+      "content": "Stage changed: contacted → scheduled",
+      "createdAt": "2026-08-25T23:44:35.983Z"
+    },
+    {
+      "id": "IX6LX2JFPh7gDEmJy0KbP",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "type": "capi_failed",
+      "content": "CAPI event \"Scheduled\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-08-25T23:44:35.997Z"
+    },
+    {
+      "id": "2U_QUZJo9r19kT7StHHKS",
+      "leadId": "1JDK7F2TiweycrcopcG4c",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.686Z"
+    },
+    {
+      "id": "auHhlsITGGOXueewrcsnT",
+      "leadId": "1JDK7F2TiweycrcopcG4c",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.699Z"
+    },
+    {
+      "id": "s-w2LYEWSH-zEyxjd4zu5",
+      "leadId": "Ikldr8j8q4dfEl4f_QJQ5",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.713Z"
+    },
+    {
+      "id": "jEE_51UCZxICQx0tzpLaG",
+      "leadId": "Ikldr8j8q4dfEl4f_QJQ5",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.721Z"
+    },
+    {
+      "id": "TgE8FoMM-Z8I-xmM6ez-L",
+      "leadId": "KJXPkYDtvwIoV5BQ10TtL",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.731Z"
+    },
+    {
+      "id": "rlYLMF1_RsIC1FFOWPAz-",
+      "leadId": "KJXPkYDtvwIoV5BQ10TtL",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.738Z"
+    },
+    {
+      "id": "wX428SRaJkiFg0D2mDjZq",
+      "leadId": "8--vZEo2pg0Uc4cHDVqDR",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.751Z"
+    },
+    {
+      "id": "UMTrkdo7MosBDxPlz1gWX",
+      "leadId": "8--vZEo2pg0Uc4cHDVqDR",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.761Z"
+    },
+    {
+      "id": "TL7OH39p7vpWZ70h91g7Q",
+      "leadId": "LU36RTxMUQrnyF2M8JK9i",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.773Z"
+    },
+    {
+      "id": "sYK6ifpbRY-mQU8ff4OBc",
+      "leadId": "LU36RTxMUQrnyF2M8JK9i",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.781Z"
+    },
+    {
+      "id": "EyCnUvq-Mo0RJ6RxEMhbQ",
+      "leadId": "WcsOd5E5zrAMw2YfSYJQx",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.792Z"
+    },
+    {
+      "id": "4q1rZfICBf9WfEPr-dUdo",
+      "leadId": "WcsOd5E5zrAMw2YfSYJQx",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.798Z"
+    },
+    {
+      "id": "whEY6iH58G_ycZpZ4d0Jm",
+      "leadId": "LzjYv_OT5vluwiQKSkLL6",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.839Z"
+    },
+    {
+      "id": "aK8aZipWoZv_wyj57--A2",
+      "leadId": "LzjYv_OT5vluwiQKSkLL6",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.845Z"
+    },
+    {
+      "id": "mcXo3DD2V5taJDUjnfYyO",
+      "leadId": "jo8BRWluA2AIDxJRWEGgY",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.856Z"
+    },
+    {
+      "id": "Hh3YbA3WG2PC4ruQxOYYr",
+      "leadId": "jo8BRWluA2AIDxJRWEGgY",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.862Z"
+    },
+    {
+      "id": "WUEMB9vwR3eJeuzhM5SAY",
+      "leadId": "nNKFNoEHEyEI3qNYJ3YgQ",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:26.870Z"
+    },
+    {
+      "id": "Y9w08Vo_PWV-m0V8OlW89",
+      "leadId": "nNKFNoEHEyEI3qNYJ3YgQ",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:26.876Z"
+    },
+    {
+      "id": "jdc6FD3ScbrylqGI2KoOj",
+      "leadId": "-6F73V0beKpqx18SjrZZA",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T18:54:27.194Z"
+    },
+    {
+      "id": "eXj8tU6WazFfmwgTpTwcC",
+      "leadId": "-6F73V0beKpqx18SjrZZA",
+      "type": "capi_failed",
+      "content": "CAPI event \"New\" not sent: missing FB_CAPI_ACCESS_TOKEN",
+      "createdAt": "2026-09-09T18:54:27.204Z"
+    },
+    {
+      "id": "l48r574iyw16xgxj248s",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "type": "system",
+      "content": "Merged duplicate Facebook sync lead (qcpnLSSrr1vYzHTnXe6Sf) into this record — linked real fbLeadgenId 27291609100514236 for future dedup.",
+      "createdAt": "2026-09-09T19:29:23.299Z"
+    },
+    {
+      "id": "wdq0nwbyve5iugezgfsk",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "type": "system",
+      "content": "Merged duplicate Facebook sync lead (UroyhoPQ-MX5SQ4oWce6y) into this record — linked real fbLeadgenId 1034926822639344 for future dedup.",
+      "createdAt": "2026-09-09T19:29:23.299Z"
+    },
+    {
+      "id": "Ew1DBXyeh39X2YmNYJRlM",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-09T20:30:01.360Z"
+    },
+    {
+      "id": "2e_15yLKDvXovHogwS_1G",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "type": "capi_sent",
+      "content": "CAPI event \"New\" sent",
+      "createdAt": "2026-09-09T20:30:03.143Z"
+    },
+    {
+      "id": "p4CBamd7ZM5h1f-_U0c88",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "type": "stage_change",
+      "content": "Stage changed: new → contacted",
+      "createdAt": "2026-09-09T20:44:01.478Z"
+    },
+    {
+      "id": "rZwAqPdqI4qvSNEgvjlc9",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "type": "capi_sent",
+      "content": "CAPI event \"Contacted\" sent",
+      "createdAt": "2026-09-09T20:44:01.716Z"
+    },
+    {
+      "id": "YWLhAEwbMV2XKPpGlnCqo",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "type": "stage_change",
+      "content": "Stage changed: contacted → scheduled",
+      "createdAt": "2026-09-10T23:18:28.829Z"
+    },
+    {
+      "id": "tEz8gE1YPgXM2UNqkRtGn",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "type": "capi_sent",
+      "content": "CAPI event \"Scheduled\" sent",
+      "createdAt": "2026-09-10T23:18:29.092Z"
+    },
+    {
+      "id": "cYKGS0nHbSyUxGxPSER7w",
+      "leadId": "-6F73V0beKpqx18SjrZZA",
+      "type": "stage_change",
+      "content": "Stage changed: new → contacted",
+      "createdAt": "2026-09-11T18:58:13.713Z"
+    },
+    {
+      "id": "iK75ruQU7GFXgoIEXE93r",
+      "leadId": "-6F73V0beKpqx18SjrZZA",
+      "type": "capi_sent",
+      "content": "CAPI event \"Contacted\" sent",
+      "createdAt": "2026-09-11T18:58:14.169Z"
+    },
+    {
+      "id": "MBIt1Yh9J_9DatQE4K5BW",
+      "leadId": "Ir-4w9e-DHYqv3EjBgdHo",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-11T19:00:01.220Z"
+    },
+    {
+      "id": "cRuT0Q6mxXAB3d_o5Hwi_",
+      "leadId": "Ir-4w9e-DHYqv3EjBgdHo",
+      "type": "capi_sent",
+      "content": "CAPI event \"New\" sent",
+      "createdAt": "2026-09-11T19:00:01.331Z"
+    },
+    {
+      "id": "M_SCzh6BeyzGeIMa5BmAb",
+      "leadId": "ScYMigEy1ub06MR_SThop",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-11T19:00:01.356Z"
+    },
+    {
+      "id": "ycXXM8GXIC90IsoLu1gaA",
+      "leadId": "ScYMigEy1ub06MR_SThop",
+      "type": "capi_sent",
+      "content": "CAPI event \"New\" sent",
+      "createdAt": "2026-09-11T19:00:01.491Z"
+    },
+    {
+      "id": "kqnQ3PGz39Szz1Y1Z3xc3",
+      "leadId": "Q1l_OvpF0YzVwgiHE-Efk",
+      "type": "system",
+      "content": "Lead created via facebook",
+      "createdAt": "2026-09-11T19:00:01.509Z"
+    },
+    {
+      "id": "EhTUnl5U2jvVL7muxnt2B",
+      "leadId": "Q1l_OvpF0YzVwgiHE-Efk",
+      "type": "capi_sent",
+      "content": "CAPI event \"New\" sent",
+      "createdAt": "2026-09-11T19:00:01.642Z"
+    },
+    {
+      "id": "4GtEr08L64t4V1UHmovBm",
+      "leadId": "Q1l_OvpF0YzVwgiHE-Efk",
+      "type": "capi_sent",
+      "content": "CAPI event \"new\" sent",
+      "createdAt": "2026-09-15T17:52:24.119Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "V1fX2wd-KmuMndCCKjRFG",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-08-19T06:37:26.000Z",
+      "done": false,
+      "createdAt": "2026-08-19T05:37:26.000Z"
+    },
+    {
+      "id": "45udq9mr4wSphlj5ZASML",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-08-18T10:28:13.000Z",
+      "done": true,
+      "createdAt": "2026-08-18T09:28:13.000Z"
+    },
+    {
+      "id": "P9cCSmjdg9pNqnIcfY7P0",
+      "leadId": "CPj5xg9JntyfL0OCuTGr3",
+      "description": "Appointment reminder (1 day before)",
+      "dueAt": "2026-08-19T15:10:00.000Z",
+      "done": false,
+      "createdAt": "2026-08-19T15:10:00.000Z"
+    },
+    {
+      "id": "-q652pDh6qg9eKxbDYWyt",
+      "leadId": "ylKx4ml1s2qVSKh5ReSA2",
+      "description": "Appointment reminder (1 day before)",
+      "dueAt": "2026-08-25T23:44:36.001Z",
+      "done": false,
+      "createdAt": "2026-08-25T23:44:36.001Z"
+    },
+    {
+      "id": "nZKFzBV6-vU6vxskK5avK",
+      "leadId": "1JDK7F2TiweycrcopcG4c",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.706Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.706Z"
+    },
+    {
+      "id": "34cAR7XSxB7M1PeRIKmlm",
+      "leadId": "Ikldr8j8q4dfEl4f_QJQ5",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.724Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.724Z"
+    },
+    {
+      "id": "eKM0pycHwZW2ol-idy4d5",
+      "leadId": "KJXPkYDtvwIoV5BQ10TtL",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.744Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.744Z"
+    },
+    {
+      "id": "xzNhinqhLu9DOBAPMJunQ",
+      "leadId": "8--vZEo2pg0Uc4cHDVqDR",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.765Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.765Z"
+    },
+    {
+      "id": "Kr4OgY_nLV6F5D63_47Yf",
+      "leadId": "LU36RTxMUQrnyF2M8JK9i",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.786Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.786Z"
+    },
+    {
+      "id": "GbZ07u3RXYySGxLgo9XxY",
+      "leadId": "WcsOd5E5zrAMw2YfSYJQx",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.800Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.800Z"
+    },
+    {
+      "id": "ROi6ZquHG8joNDMBLKILk",
+      "leadId": "LzjYv_OT5vluwiQKSkLL6",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.849Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.849Z"
+    },
+    {
+      "id": "5qhTe9VVIbqWrJYonmyB7",
+      "leadId": "jo8BRWluA2AIDxJRWEGgY",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.864Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.864Z"
+    },
+    {
+      "id": "vFWuEvPVhJ4A8bRdf921V",
+      "leadId": "nNKFNoEHEyEI3qNYJ3YgQ",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:26.880Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:26.880Z"
+    },
+    {
+      "id": "2KcV8C4RXyo-Zlg7Zn6ip",
+      "leadId": "-6F73V0beKpqx18SjrZZA",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T19:54:27.211Z",
+      "done": false,
+      "createdAt": "2026-09-09T18:54:27.211Z"
+    },
+    {
+      "id": "CpXoSnZYBHFvbRUEwndRB",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-09T21:30:03.148Z",
+      "done": false,
+      "createdAt": "2026-09-09T20:30:03.149Z"
+    },
+    {
+      "id": "iX_jCyF_a4_cXU7gVJHTf",
+      "leadId": "J7Md7Z_8bvfFkfhYOyyq9",
+      "description": "Appointment reminder (1 day before)",
+      "dueAt": "2026-09-10T23:18:29.101Z",
+      "done": false,
+      "createdAt": "2026-09-10T23:18:29.101Z"
+    },
+    {
+      "id": "NFPVm3FQXvXds2e-SLKXH",
+      "leadId": "Ir-4w9e-DHYqv3EjBgdHo",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-11T20:00:01.340Z",
+      "done": false,
+      "createdAt": "2026-09-11T19:00:01.341Z"
+    },
+    {
+      "id": "ML-6sWCFgTKSoHsey8Ks4",
+      "leadId": "ScYMigEy1ub06MR_SThop",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-11T20:00:01.498Z",
+      "done": false,
+      "createdAt": "2026-09-11T19:00:01.498Z"
+    },
+    {
+      "id": "bhDAABJfaDoRFIO_wrALD",
+      "leadId": "Q1l_OvpF0YzVwgiHE-Efk",
+      "description": "Call within 1 hour",
+      "dueAt": "2026-09-11T20:00:01.650Z",
+      "done": false,
+      "createdAt": "2026-09-11T19:00:01.650Z"
+    },
+    {
+      "id": "45X8M3u1yGSRj-T29bixu",
+      "leadId": "-6F73V0beKpqx18SjrZZA",
+      "description": "Follow up again",
+      "dueAt": "2026-09-15T17:45:03.186Z",
+      "done": false,
+      "createdAt": "2026-09-15T17:45:03.187Z"
+    }
+  ],
+  "automationRules": [
+    {
+      "id": "DkAYixOzfMfvXClg_HVzS",
+      "key": "new_lead_call_task",
+      "label": "New lead arrives → create \"Call within 1 hour\" task",
+      "trigger": "new_lead",
+      "action": "create_task",
+      "enabled": true,
+      "config": {
+        "delayHours": 1,
+        "taskDescription": "Call within 1 hour"
+      }
+    },
+    {
+      "id": "b6f6wsMc2isxKT4pnqukn",
+      "key": "new_lead_confirmation_message",
+      "label": "New lead arrives → send confirmation message",
+      "trigger": "new_lead",
+      "action": "send_message",
+      "enabled": false,
+      "config": {
+        "channel": "email",
+        "templateKey": "new-lead-confirmation"
+      }
+    },
+    {
+      "id": "ZRHVwPv5Xs-rac-Ywwp2V",
+      "key": "stale_contacted_followup_task",
+      "label": "Contacted > 48h with no activity → create \"Follow up again\" task",
+      "trigger": "stale_contacted",
+      "action": "create_task",
+      "enabled": true,
+      "config": {
+        "staleHours": 48,
+        "taskDescription": "Follow up again"
+      }
+    },
+    {
+      "id": "ubdVuZeL61B5FG5yPkHJK",
+      "key": "scheduled_reminder_task",
+      "label": "Stage → Scheduled → create appointment reminder task",
+      "trigger": "stage_change",
+      "action": "create_task",
+      "enabled": true,
+      "config": {
+        "stage": "scheduled",
+        "taskDescription": "Appointment reminder (1 day before)"
+      }
+    },
+    {
+      "id": "J7aNSnBf2Njttkf3dj7qU",
+      "key": "scheduled_reminder_message",
+      "label": "Stage → Scheduled → send appointment reminder message",
+      "trigger": "stage_change",
+      "action": "send_message",
+      "enabled": false,
+      "config": {
+        "stage": "scheduled",
+        "channel": "sms",
+        "templateKey": "appointment-reminder"
+      }
+    }
+  ],
+  "syncState": {
+    "lastSyncAt": "2026-09-15T18:35:03.504Z",
+    "lastError": null,
+    "lastCapiAt": "2026-09-15T17:52:24.114Z",
+    "lastCapiError": null,
+    "tokenValid": true,
+    "tokenCheckedAt": "2026-09-15T18:31:05.783Z",
+    "tokenCheckError": null
+  },
+  "templates": [
+    {
+      "key": "new-lead-confirmation",
+      "channel": "email",
+      "label": "New lead confirmation (email)",
+      "subject": "Gracias por contactar a Reforma Dental",
+      "body": "Hola {{name}},\n\nGracias por tu interes en Reforma Dental. Un miembro de nuestro equipo te contactara en breve para agendar tu cita.\n\nSaludos,\nReforma Dental"
+    },
+    {
+      "key": "new-lead-confirmation",
+      "channel": "sms",
+      "label": "New lead confirmation (SMS)",
+      "body": "Hola {{name}}, gracias por contactar a Reforma Dental. Te llamaremos pronto para agendar tu cita."
+    },
+    {
+      "key": "new-lead-confirmation",
+      "channel": "whatsapp",
+      "label": "New lead confirmation (WhatsApp)",
+      "body": "Hola {{name}}! Gracias por contactar a Reforma Dental. Te contactaremos pronto para agendar tu cita."
+    },
+    {
+      "key": "appointment-reminder",
+      "channel": "sms",
+      "label": "Appointment reminder (SMS)",
+      "body": "Hola {{name}}, te recordamos tu cita en Reforma Dental. Si necesitas reagendar, respondenos a este mensaje."
+    },
+    {
+      "key": "appointment-reminder",
+      "channel": "whatsapp",
+      "label": "Appointment reminder (WhatsApp)",
+      "body": "Hola {{name}}! Te recordamos tu proxima cita en Reforma Dental."
+    },
+    {
+      "key": "appointment-reminder",
+      "channel": "email",
+      "label": "Appointment reminder (email)",
+      "subject": "Recordatorio de tu cita — Reforma Dental",
+      "body": "Hola {{name}},\n\nTe recordamos tu proxima cita en Reforma Dental.\n\nSaludos,\nReforma Dental"
+    }
+  ]
+}
