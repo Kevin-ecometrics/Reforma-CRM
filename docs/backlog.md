@@ -115,7 +115,40 @@ to get right. Newest entries at the top of each section.
 - **Meta's "Conecta tu CRM" (Qualified Leads) checklist** in Events Manager
   is stuck at "Configuración completada al 20%" — "Enviar un evento de CRM"
   step not yet marked done, even after real CAPI events were sent and
-  accepted (`events_received: 1`). Two things done to close this out:
+  accepted (`events_received: 1`). Still open as of 2026-09-15 (payload fix
+  landed 2026-09-10; 5 days later, checklist unchanged despite events flowing
+  correctly). Latest findings:
+  - **Likely real cause found**: went through Meta's own CRM integration
+    guide (the "Guía de instrucciones" page in Events Manager) line by line
+    against `sendCapiEvent()` — payload structure, `action_source`,
+    `custom_data`, `lead_id`, hashed `em`/`ph`, dataset ID (confirmed exact
+    match: `606403608113212`) all check out against the guide's spec. The
+    one thing that doesn't: the guide's own "Próximos pasos" section states
+    the integration must be "subiendo datos al menos una vez al día." There
+    was a 4-day gap (2026-09-11 to 2026-09-15) with zero CAPI events —
+    no new leads/stage changes happened to trigger `sendCapiEvent()` in that
+    window. This — not a payload bug — is now the leading theory for why
+    the checklist won't advance.
+  - Minor discrepancy noted but not chased (low confidence it matters):
+    guide's sample payload shows `lead_id` as a bare JSON number
+    (`1234567890123456`), our code sends it as a string. Graph API IDs are
+    conventionally strings to avoid float-precision loss on 17-digit IDs, so
+    likely a non-issue.
+  - **Action taken**: sent a fresh test event 2026-09-15 17:52 UTC via
+    Settings → "Send a test Facebook CAPI event" (confirmed
+    `events_received: 1`). Owner will manually send one test event per day
+    from that same button until either real lead traffic resumes daily on
+    its own or the checklist updates. **Next check: 2026-09-16**, when
+    owner reviews the checklist again.
+  - **If still stuck after that**: two options discussed, neither
+    implemented yet — (a) automate a daily "heartbeat" cron job (project
+    already runs `node-cron` in `src/lib/scheduler.ts`) that re-sends a CAPI
+    event for an existing real lead only if no real `capi_sent` happened in
+    the prior 24h, or (b) escalate to Meta support with the accumulated
+    evidence (payload fix date, dataset ID match, `events_received`
+    confirmations, fbtrace_ids). Owner wants to hold off on both until
+    seeing tomorrow's checklist result.
+  - Older history below, kept for context:
   - **Payload structure fix**: the CRM integration guide's sample payload
     nests `event_source`/`lead_event_source` inside `custom_data`, but
     `sendCapiEvent()` (`src/lib/facebookCapi.ts`) was sending them as
@@ -137,10 +170,9 @@ to get right. Newest entries at the top of each section.
     "E-commetrics - RD Leads") — regenerating it has no effect on those.
   - Meta's own guide notes correct events "normalmente aparecen en un día de
     plazo" — checklist was checked same-day as the fix/token swap, so it may
-    just need another day to reflect. **Next step**: re-check the "Conecta tu
-    CRM" checklist tomorrow; if still stuck at 20% with real events flowing
-    in the corrected format, escalate via Meta support instead of assuming
-    another payload issue.
+    just need another day to reflect. (Superseded — see 2026-09-15 findings
+    above: the checklist was still stuck 5 days later, and the likelier
+    cause turned out to be the daily-cadence gap, not this.)
   - Separately, clicking "Probar eventos" in that same guide page threw a
     generic "Se ha producido un error..." in the Events Manager UI — not
     reproduced via direct API calls, so likely a UI-side permissions/session
