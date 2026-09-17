@@ -3,10 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaColumns, FaCog } from "react-icons/fa";
+import { FaColumns, FaCog, FaChartBar } from "react-icons/fa";
 
 const NAV = [
   { href: "/", label: "Pipeline", icon: FaColumns },
+  { href: "/dashboard", label: "Dashboard", icon: FaChartBar },
   { href: "/settings", label: "Settings", icon: FaCog },
 ];
 

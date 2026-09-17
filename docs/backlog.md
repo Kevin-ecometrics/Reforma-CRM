@@ -140,6 +140,18 @@ to get right. Newest entries at the top of each section.
     from that same button until either real lead traffic resumes daily on
     its own or the checklist updates. **Next check: 2026-09-16**, when
     owner reviews the checklist again.
+  - **Update 2026-09-17**: owner sent a manual CAPI test event on 3
+    consecutive days (2026-09-15, 09-16, 09-17). Checklist still reads
+    "Configuración completada al 20%" today. This weakens the daily-cadence
+    theory considerably — three straight days of confirmed delivery
+    (`events_received: 1` each time) should have been enough for the "al
+    menos una vez al día" requirement to register if that were the real
+    blocker. Leaning back toward this being a UI/backend lag on Meta's side
+    or a stricter/different requirement than the guide states (e.g. needing
+    real, non-test lead-sourced events rather than the manual test button,
+    or a longer observation window). Per the plan below, next step is
+    escalating to Meta support with the accumulated evidence rather than
+    continuing to wait.
   - **If still stuck after that**: two options discussed, neither
     implemented yet — (a) automate a daily "heartbeat" cron job (project
     already runs `node-cron` in `src/lib/scheduler.ts`) that re-sends a CAPI
@@ -200,3 +212,52 @@ to get right. Newest entries at the top of each section.
 (nothing currently — SMTP, Facebook Lead Ads/CAPI, and WhatsApp connectivity
 are done; Twilio is blocked on the owner above; WhatsApp's remaining gaps are
 tracked under Open.)
+
+## CRM feature backlog
+
+Product/UI features for the CRM app itself, separate from the messaging
+integrations tracked above.
+
+### Done (2026-09-17)
+
+- **Send message from a lead** — "Send message" button on the lead detail
+  page opens a modal to pick Email or WhatsApp and a template, then sends via
+  the existing `sendMessageToLead()`. See `src/app/components/SendMessageModal.tsx`
+  and `POST /api/leads/[id]/send`.
+- **Form answers on lead detail** — Facebook Lead Ads form Q&A (previously
+  captured in `fieldDataRaw` but never shown) now renders as a readable
+  section on the lead page.
+- **Search/filter leads** — search box on the pipeline filters by name,
+  email, phone, or campaign.
+- **Overdue task highlighting** — overdue tasks show in red with an
+  "Overdue" label, both in the sidebar tasks panel and on the lead detail
+  page.
+- **Dashboard** (`/dashboard`) — total leads, conversion rate (to "Won"),
+  open/overdue tasks, messages sent/failed, leads by source, leads-by-stage
+  bar chart. Backed by `GET /api/dashboard`.
+- **Export leads to CSV** — "Export CSV" button on the pipeline, backed by
+  `GET /api/leads/export`.
+
+### Open — no API/webhook needed
+
+- **Manually create a task from a lead** — right now tasks only get created
+  by automation rules; there's no button on the lead detail page to add an
+  ad-hoc task ("call tomorrow", etc.).
+- **Edit lead contact info** — name/email/phone can only be set at creation
+  (`AddLeadModal`); there's no way to fix a typo or update a lead's phone
+  number afterward.
+- **Bulk actions on the pipeline** — select multiple lead cards to move
+  stage or send the same message/template at once.
+- **Click-to-call / click-to-copy** — `tel:`/`mailto:` links and a copy
+  button on phone/email in the lead card and detail page.
+- **Automated duplicate-lead detection** — flag/warn when a new lead's
+  email or phone matches an existing lead instead of creating a silent
+  duplicate (see the one-off manual cleanup under Done above — this would
+  make that a recurring safeguard rather than a one-time fix).
+
+### Open — needs a real API/webhook integration (bigger lift)
+
+- **Inbound WhatsApp/email replies visible in the CRM** — currently the CRM
+  only shows what *it* sent; a lead's replies have to be checked in
+  WhatsApp/the mailbox directly. Would need a WhatsApp webhook (Meta Cloud
+  API) and an inbound-email listener.

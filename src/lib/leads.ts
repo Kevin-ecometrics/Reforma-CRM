@@ -32,11 +32,12 @@ export async function addActivity(
   return activity;
 }
 
-export async function listActivities(leadId: string): Promise<Activity[]> {
+export async function listActivities(leadId?: string): Promise<Activity[]> {
   const db = await getDb();
-  return db.data.activities
-    .filter((a) => a.leadId === leadId)
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  const activities = leadId ? db.data.activities.filter((a) => a.leadId === leadId) : db.data.activities;
+  return [...activities].sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
 }
 
 export async function listTasks(leadId?: string): Promise<Task[]> {

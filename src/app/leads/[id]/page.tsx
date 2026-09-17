@@ -10,7 +10,25 @@ import {
   Textarea,
 } from "@nextui-org/react";
 import { FaArrowLeft } from "react-icons/fa";
-import type { Activity, Lead, Stage, Task } from "@/lib/types";
+import { SendMessageModal } from "@/app/components/SendMessageModal";
+import type { Activity, Lead, MessageTemplate, Stage, Task } from "@/lib/types";
+
+const HIDDEN_FIELD_KEYS = new Set(["platform", "is_organic"]);
+const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z?$/;
+
+function formatFieldLabel(key: string): string {
+  const words = key.replace(/_/g, " ").replace(/\?$/, "").trim();
+  const label = words.charAt(0).toUpperCase() + words.slice(1);
+  return key.endsWith("?") ? `${label}?` : label;
+}
+
+function formatFieldValue(value: unknown): string {
+  if (value === null || value === undefined || value === "") return "—";
+  if (typeof value === "string" && ISO_DATE_RE.test(value)) {
+    return new Date(value).toLocaleString();
+  }
+  return String(value);
+}
 
 const ACTIVITY_LABEL: Record<Activity["type"], string> = {
   note: "Note",
@@ -27,6 +45,7 @@ export default function LeadDetailPage({ params }: { params: { id: string } }) {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [tasks, setTasks] = useState<Task[]>([]);
   const [stages, setStages] = useState<Stage[]>([]);
+  const [templates, setTemplates] = useState<MessageTemplate[]>([]);
   const [notesDraft, setNotesDraft] = useState("");
   const [loading, setLoading] = useState(true);
 
@@ -41,6 +60,7 @@ export default function LeadDetailPage({ params }: { params: { id: string } }) {
     setActivities(leadData.activities ?? []);
     setTasks(leadData.tasks ?? []);
     setStages((settingsData.stages ?? []).sort((a: Stage, b: Stage) => a.order - b.order));
+    setTemplates(settingsData.templates ?? []);
     setLoading(false);
   }
 
@@ -101,39 +121,62 @@ export default function LeadDetailPage({ params }: { params: { id: string } }) {
             )}
           </div>
         </div>
-        <Select
-          label="Stage"
-          className="w-48"
-          selectedKeys={[lead.stage]}
-          onChange={(e) => e.target.value && changeStage(e.target.value)}
-        >
-          {stages.map((s) => (
-            <SelectItem key={s.id} value={s.id}>
-              {s.name}
-            </SelectItem>
-          ))}
-        </Select>
+        <div className="flex flex-col items-end gap-2">
+          <Select
+            label="Stage"
+            className="w-48"
+            selectedKeys={[lead.stage]}
+            onChange={(e) => e.target.value && changeStage(e.target.value)}
+          >
+            {stages.map((s) => (
+              <SelectItem key={s.id} value={s.id}>
+                {s.name}
+              </SelectItem>
+            ))}
+          </Select>
+          <SendMessageModal lead={lead} templates={templates} onSent={load} />
+        </div>
       </div>
+
+      {lead.fieldDataRaw && Object.keys(lead.fieldDataRaw).some((k) => !HIDDEN_FIELD_KEYS.has(k)) && (
+        <section className="mb-8">
+          <h2 className="text-sm font-semibold mb-2">Form answers</h2>
+          <dl className="space-y-2 text-sm border border-neutral-200 dark:border-neutral-800 rounded-md p-3">
+            {Object.entries(lead.fieldDataRaw)
+              .filter(([key]) => !HIDDEN_FIELD_KEYS.has(key))
+              .map(([key, value]) => (
+                <div key={key} className="flex flex-col">
+                  <dt className="text-xs text-neutral-500">{formatFieldLabel(key)}</dt>
+                  <dd className="whitespace-pre-wrap">{formatFieldValue(value)}</dd>
+                </div>
+              ))}
+          </dl>
+        </section>
+      )}
 
       <section className="mb-8">
         <h2 className="text-sm font-semibold mb-2">Tasks</h2>
         {tasks.length === 0 && <p className="text-sm text-neutral-500">No tasks yet.</p>}
         <ul className="space-y-1">
-          {tasks.map((task) => (
-            <li key={task.id} className="flex items-center gap-2 text-sm">
-              <input
-                type="checkbox"
-                checked={task.done}
-                onChange={() => !task.done && completeTask(task.id)}
-              />
-              <span className={task.done ? "line-through text-neutral-400" : ""}>
-                {task.description}
-              </span>
-              <span className="text-xs text-neutral-500 ml-auto">
-                {new Date(task.dueAt).toLocaleString()}
-              </span>
-            </li>
-          ))}
+          {tasks.map((task) => {
+            const overdue = !task.done && new Date(task.dueAt).getTime() < Date.now();
+            return (
+              <li key={task.id} className="flex items-center gap-2 text-sm">
+                <input
+                  type="checkbox"
+                  checked={task.done}
+                  onChange={() => !task.done && completeTask(task.id)}
+                />
+                <span className={task.done ? "line-through text-neutral-400" : overdue ? "text-danger" : ""}>
+                  {task.description}
+                </span>
+                <span className={`text-xs ml-auto ${overdue ? "text-danger" : "text-neutral-500"}`}>
+                  {overdue ? "Overdue — " : ""}
+                  {new Date(task.dueAt).toLocaleString()}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </section>
 

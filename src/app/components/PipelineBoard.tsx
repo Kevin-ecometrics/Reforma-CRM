@@ -1,6 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Button, Input } from "@nextui-org/react";
+import { FaSearch, FaDownload } from "react-icons/fa";
 import type { Lead, Stage } from "@/lib/types";
 import { LeadCard } from "./LeadCard";
 import { AddLeadModal } from "./AddLeadModal";
@@ -11,6 +13,17 @@ export function PipelineBoard() {
   const [stages, setStages] = useState<Stage[]>([]);
   const [draggingId, setDraggingId] = useState<string | null>(null);
   const [refreshKey, setRefreshKey] = useState(0);
+  const [search, setSearch] = useState("");
+
+  const filteredLeads = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    if (!q) return leads;
+    return leads.filter((l) =>
+      [l.name, l.email, l.phone, l.campaignName]
+        .filter(Boolean)
+        .some((field) => field!.toLowerCase().includes(q))
+    );
+  }, [leads, search]);
 
   async function load() {
     const [leadsRes, settingsRes] = await Promise.all([
@@ -40,17 +53,39 @@ export function PipelineBoard() {
   return (
     <div className="flex h-screen">
       <div className="flex-1 min-w-0 flex flex-col">
-        <header className="flex items-center justify-between border-b border-neutral-200 dark:border-neutral-800 px-6 py-4">
+        <header className="flex items-center justify-between gap-4 border-b border-neutral-200 dark:border-neutral-800 px-6 py-4">
           <div>
             <h1 className="text-lg font-semibold">Lead pipeline</h1>
-            <p className="text-xs text-neutral-500">{leads.length} leads total</p>
+            <p className="text-xs text-neutral-500">
+              {search ? `${filteredLeads.length} of ${leads.length} leads` : `${leads.length} leads total`}
+            </p>
           </div>
-          <AddLeadModal onCreated={() => setRefreshKey((k) => k + 1)} />
+          <Input
+            size="sm"
+            className="max-w-xs"
+            placeholder="Search by name, email, phone, campaign…"
+            startContent={<FaSearch size={12} className="text-neutral-400" />}
+            value={search}
+            onValueChange={setSearch}
+            isClearable
+          />
+          <div className="flex items-center gap-2 shrink-0">
+            <Button
+              size="sm"
+              variant="flat"
+              startContent={<FaDownload size={12} />}
+              as="a"
+              href="/api/leads/export"
+            >
+              Export CSV
+            </Button>
+            <AddLeadModal onCreated={() => setRefreshKey((k) => k + 1)} />
+          </div>
         </header>
         <div className="flex-1 overflow-x-auto px-6 py-4">
           <div className="flex gap-4 h-full min-w-max">
             {stages.map((stage) => {
-              const stageLeads = leads.filter((l) => l.stage === stage.id);
+              const stageLeads = filteredLeads.filter((l) => l.stage === stage.id);
               return (
                 <div
                   key={stage.id}
